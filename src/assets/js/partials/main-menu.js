@@ -21,12 +21,12 @@ class NavigationMenu extends HTMLElement {
                 this.overflowMenus = [];
 
                 return salla.api.component.getMenus()
-                .then(({ data }) => {
-                    this.menus = data;
-                    return this.render()
-                }).then(() => {
-                    this.initializeResponsiveMenu();
-                }).catch((error) => salla.logger.error('salla-menu::Error fetching menus', error));
+                    .then(({ data }) => {
+                        this.menus = data;
+                        return this.render()
+                    }).then(() => {
+                        this.initializeResponsiveMenu();
+                    }).catch((error) => salla.logger.error('salla-menu::Error fetching menus', error));
             });
     }
 
@@ -71,7 +71,7 @@ class NavigationMenu extends HTMLElement {
         return `
         <li class="lg:hidden text-sm font-bold" ${menu.attrs}>
             ${!this.hasChildren(menu) ? `
-                <a href="${menu.url}" aria-label="${menu.title || 'category'}" class="text-gray-500 ${menu.image ? '!py-3' : ''}" ${menu.link_attrs}>
+                <a href="${menu.url}" aria-label="${'category'}" class="text-gray-500 ${menu.image ? '!py-3' : ''}" ${menu.link_attrs}>
                     ${menuImage}
                     <span>${menu.title || ''}</span>
                 </a>` :
@@ -263,7 +263,7 @@ class NavigationMenu extends HTMLElement {
     * Render the header menu
     */
     render() {
-        this.innerHTML =  `
+        this.innerHTML = `
         <nav id="mobile-menu" class="mobile-menu">
             <ul class="main-menu">${this.getMenus()}</ul>
             <button class="btn--close close-mobile-menu sicon-cancel lg:hidden"></button>
