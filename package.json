@@ -55,7 +55,10 @@
   "pnpm": {
     "overrides": {
       "@salla.sa/ui-address-autocomplete-widget": "link:.stubs/ui-address-autocomplete-widget",
-      "@salla.sa/ui-google-map-render": "link:.stubs/ui-google-map-render"
+      "@salla.sa/ui-google-map-render": "link:.stubs/ui-google-map-render",
+      "@salla.sa/twilight": "link:.stubs/twilight",
+      "@salla.sa/twilight-components": "link:.stubs/twilight-components",
+      "@salla.sa/twilight-tailwind-theme": "link:.stubs/twilight-tailwind-theme"
     }
   }
 }

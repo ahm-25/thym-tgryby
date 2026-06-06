@@ -1,0 +1,6 @@
+{
+  "name": "@salla.sa/twilight",
+  "version": "2.14.457",
+  "description": "Stub for missing Salla twilight package",
+  "main": "index.js"
+}
